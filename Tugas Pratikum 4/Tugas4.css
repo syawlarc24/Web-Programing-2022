@@ -1,0 +1,24 @@
+.Profilename {
+     color: darkred;
+}
+
+.img {
+    display: flex;
+    width: 1000px;
+    margin: 0 100px;
+    justify-content: space-between;
+}
+
+.Pikachu {
+    width: 100px;
+}
+
+.bigbang {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tulis {
+    width: 1000px;
+    margin: 0 100px;
+}

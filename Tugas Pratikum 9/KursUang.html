@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Mata Uang</title>
+</head>
+<body>
+    <input id="nilaiAwal" type="text" placeholder="Masukkan Nilai" onchange="tampilanhasil()">
+
+    <select id="valaspilihan" onchange="tampilanhasil()">
+        <option value="US Dollar">US Dollar</option>
+        <option value="Dollar Singapore">Dollar Singapore</option>
+        <option value="Ringgit Malaysia">Ringgit Malaysia</option>
+        <option value="Yen Jepang">Yen Jepang</option>
+        <option value="Euro">Euro</option>
+        <option value="Riyal Saudi">Riyal Saudi</option>
+    
+    </select>
+
+    <input  id="hasil" type="text" placeholder="hasilnya">
+
+    <script>
+        let valas = ["US Dollar", "Dollar Singapore", "Ringgit Malaysia", "Yen Jepang", "Euro", "Riyal Saudi"]
+        let nilaiAwal = document.getElementById("nilaiAwal")
+        let valas1 = document.getElementById("valaspilihan")
+        let hasil = document.getElementById("hasil")
+        let penampung
+        let format = new Intl.NumberFormat('id-ID')
+
+        function tampilanhasil() {
+            if (valaspilihan.value == "US Dollar") {
+                penampung = nilaiAwal.value * 9915
+            } else if (valaspilihan.value == "Dollar Singapore") {
+                penampung = nilaiAwal.value * 13472
+            } else if (valaspilihan.value == "Ringgit Malaysia") {
+                penampung = nilaiAwal.value * 874
+            } else if (valaspilihan.value == "Yen Jepang") {
+                penampung = nilaiAwal.value * 120
+            } else if (valaspilihan.value == "Euro") {
+                penampung = nilaiAwal.value * 15888
+            } else if (valaspilihan.value == "Riyal Saudi") {
+                penampung  = nilaiAwal.value * 3592
+            } else {
+                penampung = nilaiAwal.value * 0
+        }
+    </script>
+</body>
+</html>

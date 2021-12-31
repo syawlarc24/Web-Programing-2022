@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+</head>
+<body>
+    
+    <label for="hewan">Hewan</label>
+    <select id="hewan">
+        <option value="Gorilla">Gorilla</option>
+        <option value="Kuda">Kuda</option>
+        <option value="Domba">Domba</option>
+        <option value="Landak">Landak</option>
+        <option value="Kelinci">Kelinci</option>
+
+    </select>
+    <button onclick="cetakGambar()">Cetak Gambar</button>
+    
+    <img id="gambar" src="">
+
+    <script>
+        
+        function cetakGambar() {
+            const hewan = document.getElementById('hewan');
+            const gambar = document.getElementById('gambar');
+
+            if (hewan.value === 'Gorilla') {
+                gambar.src = 'https://awsimages.detik.net.id/community/media/visual/2016/05/30/9b70078d-4fad-4325-b37f-d7e27801071c_11.jpg?w=700&q=90'
+            }
+
+            if (hewan.value === 'Kuda') {
+                gambar.src = 'https://static.republika.co.id/uploads/images/detailnews/kuda-arab-_121205172140-321.jpg'
+            }
+            if (hewan.value === 'Domba') {
+                gambar.src = 'https://asset.kompas.com/crops/Q_yjANNivJAsIx0tq0gch_uB9OM=/0x0:900x600/750x500/data/photo/2020/08/31/5f4ca927bc71d.jpg'
+            }
+            if (hewan.value === 'Landak') {
+                gambar.src = 'https://asset.kompas.com/crops/2xcDklYqQ109c0xdr53IabTzquQ=/195x128:1725x1148/750x500/data/photo/2021/06/18/60cb8e4d35a4f.jpg'
+            }
+            if (hewan.value === 'Kelinci') {
+                gambar.src = 'https://asset.kompas.com/crops/00Bui5wlErIQHh0DcQkevgB5xgg=/192x130:1728x1154/750x500/data/photo/2021/09/29/615414215159d.jpg'
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
